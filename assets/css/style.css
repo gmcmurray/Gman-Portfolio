@@ -1,0 +1,145 @@
+
+:root{
+  --width: 1200px;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  border: 2px black;
+  max-width: var(--width);
+  margin:20px;
+}
+/* Header uses flexboxes and nav element to hyperlink to sections below 
+sub-elements, inline table is used to order the hyperlinks which are horizontal */
+header {
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 20px; 
+  align-items: stretch;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #2a607c;
+  color: #ffffff;
+  flex-shrink:
+}
+a {color: white}
+
+#workinprocess{
+  color:darkmagenta;
+}
+header h1 {
+  display: inline-block;
+  font-size: 48px;
+}
+
+header nav {
+    display:flex;
+    justify-content: flex-end; 
+    height: 100%;
+    max-width: var(--width);
+    align-items: flex-end;
+    color:blanchedalmond;
+}
+
+header nav ul {
+  display: flex;
+  justify-content:space-between;
+  align-items: stretch;
+  margin: 5px 10px 0 100px;
+  list-style: none;
+}
+
+header nav ul li {
+  margin-right:10px;
+  margin-left:10px;
+  margin-top: 20px;
+  font-size: 15px;
+  color:white;
+}
+/* why are my projects not wrapping */
+/* why are my boxes not shrinking */
+main {
+  display:flex;
+  flex-wrap:wrap;
+  border: 5px black;
+  flex-direction: column;
+  max-width: var(--width);
+  background-color: cyan;
+  flex-shrink:1;
+}
+#bio {
+   display: flex;
+   flex-direction: row;
+   flex-wrap:wrap;
+   justify-content: space-around;
+   align-items: stretch;
+   border:brown;
+   background-color: darkgrey;
+ }
+ #bioc1 {
+   flex-grow: 1;
+   width:100px;
+ }
+ #bioc2 {
+   flex-grow:4;
+   width: 400px;
+ }
+
+main #p1{ align-self: center;}
+#main-project-container {
+      border: 2px solid rgb(34, 160, 51);
+      width: 600px;
+      height:400px;
+      display: flex;
+      margin: 20 px;
+      flex-direction: column;
+      align-self:center;
+      flex-shrink:1;
+  }
+main #sub-project-container {
+    flex-direction:row;
+    flex-wrap:wrap;
+    display: flex;
+}
+.subproject {
+    border: 2px solid rgb(34, 160, 51);
+    padding: 5px ;
+    flex-basis:300px;
+    flex-grow:1;
+    flex-shrink:1;
+    flex-wrap:wrap;
+  }
+  footer {
+    display:flex;
+    flex-flow: row nowrap;
+    padding: 20px; 
+    align-items: stretch;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #527c2a;
+    color: #ffffff;
+    justify-content:space-between;
+  }
+  
+  footer ul {
+  display: flex;
+  justify-content:space-between;
+  align-items: stretch;
+  margin: 5px 10px 0 10px;
+  list-style: none;
+  align-items: flex-end;
+  }
+
+  footer ul li {
+    margin-right:40px;
+    margin-left:10px;
+    margin-top: 20px;
+    font-size: 15px;
+    color:white;
+  }
+  #thanks {
+    margin: 5px 40% 0 40%;
+  }
+  
