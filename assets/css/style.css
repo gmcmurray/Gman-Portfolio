@@ -23,8 +23,8 @@ header {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background-color: #2a607c;
   color: #ffffff;
-  flex-shrink:
 }
+
 a {color: white}
 
 #workinprocess{
@@ -89,16 +89,23 @@ main {
  }
 
 main #p1{ align-self: center;}
+
 #main-project-container {
       border: 2px solid rgb(34, 160, 51);
-      width: 600px;
-      height:400px;
+      width: 60vw;
+      height: 60vh;
       display: flex;
       margin: 20 px;
       flex-direction: column;
       align-self:center;
       flex-shrink:1;
   }
+.row{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
 main #sub-project-container {
     flex-direction:row;
     flex-wrap:wrap;
@@ -111,6 +118,9 @@ main #sub-project-container {
     flex-grow:1;
     flex-shrink:1;
     flex-wrap:wrap;
+  }
+  .float-right{
+    margin-left: 20px;
   }
   footer {
     display:flex;
@@ -142,4 +152,22 @@ main #sub-project-container {
   #thanks {
     margin: 5px 40% 0 40%;
   }
-  
+  .skinny {
+    visibility: hidden ;
+  }
+
+  @media screen and (max-width:775px) {
+    header h1 {
+      display: inline-block;
+      font-size: 24px;
+      color:yellow;
+    }
+  }
+  @media screen and (max-width:550px) {
+    * {background-color: darkorange;}
+    .skinny {
+      color: black;
+      visibility: visible;
+    }
+  }
+
