@@ -1,6 +1,8 @@
 
 :root{
   --width: 1200px;
+  --biofontsize:20px;
+  --expertise:16px;
 }
 * {
   box-sizing: border-box;
@@ -70,6 +72,7 @@ main {
   background-color: cyan;
   flex-shrink:1;
 }
+/* Bio section as flexbox */
 #bio {
    display: flex;
    flex-direction: row;
@@ -79,17 +82,16 @@ main {
    border:brown;
    background-color: darkgrey;
  }
- #bioc1 {
-   flex-grow: 1;
-   width:100px;
- }
+
+ /* Text of biography, font scales with width */
  #bioc2 {
-   flex-grow:4;
-   width: 400px;
+   font-size: var(--biofontsize);
+   /* flex-grow:4; */
+   /* width: 400px; */
  }
 
 main #p1{ align-self: center;}
-
+/* All projects container - column flex */
 #main-project-container {
       border: 2px solid rgb(34, 160, 51);
       width: 60vw;
@@ -100,17 +102,36 @@ main #p1{ align-self: center;}
       align-self:center;
       flex-shrink:1;
   }
+  /* Provides row flex container inside a column container */
 .row{
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
 }
+.column{
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+option {
+  font-size: var(--expertise);
+}
 
+#wormbutton{
+  background-color: yellow;
+    padding: 10px;
+    display: block;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 30px; 
+}
 main #sub-project-container {
     flex-direction:row;
     flex-wrap:wrap;
     display: flex;
 }
+
+/* Styles subprojects  */
 .subproject {
     border: 2px solid rgb(34, 160, 51);
     padding: 5px ;
@@ -119,22 +140,25 @@ main #sub-project-container {
     flex-shrink:1;
     flex-wrap:wrap;
   }
-  .subproject .hideinfo {
+
+  /* Styles info on projects, Hides  when not hovering over hyperlink */
+.subproject .hideinfo, #main-project-container .hideinfo{
     background-color: yellow;
     padding: 10px;
-    display: flex;
+    display: none;
     border-style: solid;
     border-width: 2px;
-    border-radius: 10%; 
+    border-radius: 30px; 
   }
 
-  .subproject a:hover + .hideinfo{
-    display: block
+  /* Displays info on projects when hover over hyperlink */
+ .subproject a:hover + .hideinfo{
+    display: flex
+  }
+  #main-project-container a:hover + .hideinfo{
+    display: flex
   }
 
-  .float-right{
-    margin-left: 20px;
-  }
 
   footer {
     display:flex;
@@ -169,19 +193,31 @@ main #sub-project-container {
   .skinny {
     visibility: hidden ;
   }
-
-  @media screen and (max-width:775px) {
+/* Media breaks at 700px and 550px changin fontsizes in bio, h1 headear*/
+  @media screen and (max-width:700px) {
     header h1 {
       display: inline-block;
-      font-size: 24px;
-      color:yellow;
+      font-size: 36px;
     }
-  }
+    :root {
+      --biofontsize:16px;
+      --expertise:12px;
+    }
+
+
+  /* Display warning screen too small for 550px and below */
   @media screen and (max-width:550px) {
     * {background-color: darkorange;}
+   :root{ --biofontsize:12px;
+    --expertise:8px;}
     .skinny {
       color: black;
       visibility: visible;
+      
+    }
+    header h1 {
+      display: inline-block;
+      font-size: 24px;
     }
   }
 
