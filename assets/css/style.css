@@ -190,7 +190,8 @@ main #sub-project-container {
     border-width: 2px;
     border-radius: 30px; 
   }
-
+main * a { border: 2px;
+border-style: solid;}
   /* Displays info on projects when hover over hyperlink */
  .subproject a:hover + .hideinfo{
     display: flex
@@ -198,6 +199,7 @@ main #sub-project-container {
   #main-project-container a:hover + .hideinfo{
     display: flex
   }
+
 
   footer {
     display:flex;
