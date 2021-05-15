@@ -6,6 +6,8 @@ HTML,CSS Files: https://github.com/gmcmurray/horiseon-website
 
 Deployed Application: https://gmcmurray.github.io/horiseon-website/
 
+Supporting Page: https://gmcmurray.github.io/workinprogress/
+
 ## Description 
 
 Using flex boxes create a site which will highlight your portfolio of projects
