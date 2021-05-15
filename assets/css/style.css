@@ -2,7 +2,7 @@
 :root{
   --width: 1200px;
   --biofontsize:20px;
-  --expertise:16px;
+  --expertise: 20vw;
 }
 * {
   box-sizing: border-box;
@@ -90,34 +90,52 @@ main {
    /* width: 400px; */
  }
 
-main #p1{ align-self: center;}
+#p1 { align-self: center;}
 /* All projects container - column flex */
 #main-project-container {
       border: 2px solid rgb(34, 160, 51);
-      width: 60vw;
-      height: 60vh;
+      width: 70vw;
+      /* height: 60vh;  */
       display: flex;
-      margin: 20 px;
+      /* margin: 20 px; */
       flex-direction: column;
-      align-self:center;
+      align-self:center ; 
+      align-items: flex-start;
       flex-shrink:1;
+      background-color: rgb(28, 153, 95);
+      padding: 10px;
   }
   /* Provides row flex container inside a column container */
-.row{
+.survey {
   display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-style: solid;
+  border-width: 2px;
 }
+.checkbox{
+margin:5px;
+padding:0;
+height: 12px;
+}
+
 .column{
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
 }
-option {
-  font-size: var(--expertise);
-}
 
-#wormbutton{
+/* Form styling */
+#survey {
+  display: flex;
+  flex-flow: row;
+}
+form{
+  flex:1 1 auto;
+  width: 50vw;
+}
+form button{
   background-color: yellow;
     padding: 10px;
     display: block;
@@ -125,6 +143,28 @@ option {
     border-width: 2px;
     border-radius: 30px; 
 }
+
+
+form input {
+  width: 20vw;
+}
+form select{
+  width: 200px;
+}
+#worm {
+flex: 1 1 auto
+}
+
+#agree{
+  align-items: flex-start;
+}
+input#agreement.checkbox {
+  margin:0;
+  align-items: flex-start;
+  padding: 0%;
+  float:left;
+}
+
 main #sub-project-container {
     flex-direction:row;
     flex-wrap:wrap;
@@ -159,7 +199,6 @@ main #sub-project-container {
     display: flex
   }
 
-
   footer {
     display:flex;
     flex-flow: row nowrap;
@@ -169,6 +208,10 @@ main #sub-project-container {
     background-color: #527c2a;
     color: #ffffff;
     justify-content:space-between;
+  }
+
+  footer h1{
+    font-size: 24px;
   }
   
   footer ul {
@@ -181,32 +224,46 @@ main #sub-project-container {
   }
 
   footer ul li {
-    margin-right:40px;
-    margin-left:10px;
-    margin-top: 20px;
+    margin : 10px 40px 5px 5px;
     font-size: 15px;
     color:white;
   }
   #thanks {
-    margin: 5px 40% 0 40%;
+    margin: 5px 25% 0 25%;
+    padding: 1px 10% 1px 10%;
   }
   .skinny {
     visibility: hidden ;
   }
-/* Media breaks at 700px and 550px changin fontsizes in bio, h1 headear*/
+/* Media breaks at 700px and 545px changin fontsizes in bio, h1 headear*/
   @media screen and (max-width:700px) {
     header h1 {
-      display: inline-block;
+      /* display: inline-block; */
       font-size: 36px;
+    }
+    header nav ul {
+      display: flex;
+      justify-content:space-between;
+      align-items: stretch;
+      margin: 5px 5px 0 10px;
+      list-style: none;
     }
     :root {
       --biofontsize:16px;
       --expertise:12px;
     }
-
+    footer ul li {
+      margin : 10px 4px 5px 5px;
+      font-size: 15px;
+      color:white;
+    }
+    footer h1{
+      font-size:20px;
+    }
+  }
 
   /* Display warning screen too small for 550px and below */
-  @media screen and (max-width:550px) {
+  @media screen and (max-width:545px) {
     * {background-color: darkorange;}
    :root{ --biofontsize:12px;
     --expertise:8px;}
