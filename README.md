@@ -2,9 +2,9 @@
 First Draft on Portfolio Page 
 
 # Working Files
-HTML,CSS Files: https://github.com/gmcmurray/horiseon-website
+HTML,CSS Files: https://github.com/gmcmurray/Gman-Portfolio
 
-Deployed Application: https://gmcmurray.github.io/horiseon-website/
+Deployed Application: https://gmcmurray.github.io/Gman-Portfolio/
 
 Supporting Page: https://gmcmurray.github.io/workinprogress/
 
