@@ -155,14 +155,13 @@ form select{
 flex: 1 1 auto
 }
 
-#agree{
-  align-items: flex-start;
+.checkboxes {
+  text-align:center;
 }
-input#agreement.checkbox {
-  margin:0;
-  align-items: flex-start;
-  padding: 0%;
-  float:left;
+
+.checkboxes input{
+  margin: 0 10px 0 5px;
+  padding: 0 0 0 0;
 }
 
 main #sub-project-container {
