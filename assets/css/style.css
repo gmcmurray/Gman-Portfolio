@@ -14,6 +14,23 @@ body {
   max-width: var(--width);
   margin:20px;
 }
+h6{
+  text-decoration: underline;
+  font-weight: bolder;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.ccenter {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+.list {
+  list-style:disc outside none;
+  display:list-item; 
+  }
 /* Header uses flexboxes and nav element to hyperlink to sections below 
 sub-elements, inline table is used to order the hyperlinks which are horizontal */
 header {
@@ -92,19 +109,19 @@ main {
 
 #p1 { align-self: center;}
 /* All projects container - column flex */
-#main-project-container {
+/* #main-project-container {
       border: 2px solid rgb(34, 160, 51);
-      width: 70vw;
+      /* width: 70vw; */
       /* height: 60vh;  */
-      display: flex;
+      /* display: flex; */
       /* margin: 20 px; */
-      flex-direction: column;
+      /* flex-direction: column;
       align-self:center ; 
       align-items: flex-start;
       flex-shrink:1;
       background-color: rgb(28, 153, 95);
       padding: 10px;
-  }
+  } */ 
   /* Provides row flex container inside a column container */
 .survey {
   display: flex;
@@ -145,15 +162,7 @@ form button{
 }
 
 
-form input {
-  width: 20vw;
-}
-form select{
-  width: 200px;
-}
-#worm {
-flex: 1 1 auto
-}
+
 
 .checkboxes {
   text-align:center;
@@ -178,6 +187,11 @@ main #sub-project-container {
     flex-grow:1;
     flex-shrink:1;
     flex-wrap:wrap;
+    border-radius: 15px;
+  }
+
+  #p1, .subproject h4, .subproject h5{
+    font-family: 'Akaya Kanadaka';
   }
 
   /* Styles info on projects, Hides  when not hovering over hyperlink */
@@ -236,46 +250,103 @@ border-style: solid;}
   .skinny {
     visibility: hidden ;
   }
-/* Media breaks at 700px and 545px changin fontsizes in bio, h1 headear*/
-  @media screen and (max-width:700px) {
-    header h1 {
-      /* display: inline-block; */
-      font-size: 36px;
-    }
-    header nav ul {
-      display: flex;
-      justify-content:space-between;
-      align-items: stretch;
-      margin: 5px 5px 0 10px;
-      list-style: none;
-    }
-    :root {
-      --biofontsize:16px;
-      --expertise:12px;
-    }
-    footer ul li {
-      margin : 10px 4px 5px 5px;
-      font-size: 15px;
-      color:white;
-    }
-    footer h1{
-      font-size:20px;
-    }
-  }
 
   /* Display warning screen too small for 550px and below */
-  @media screen and (max-width:545px) {
-    * {background-color: darkorange;}
-   :root{ --biofontsize:12px;
-    --expertise:8px;}
-    .skinny {
-      color: black;
-      visibility: visible;
-      
-    }
-    header h1 {
-      display: inline-block;
-      font-size: 24px;
-    }
-  }
+
+.grid-container{
+  display: grid;
+  grid-template-rows: repeat(5,150px);
+  grid-template-columns: repeat(5,150px);
+  grid-gap: 20px;
+}
+.grid-container600{
+  display: grid;
+  grid-template-rows: repeat(5,80px);
+  grid-template-columns: repeat(5,80px);
+  grid-gap: 20px;
+}
+.grid-container750{
+  display: grid;
+  grid-template-rows: repeat(5,100px);
+  grid-template-columns: repeat(5,100px);
+  grid-gap: 20px;
+}
+.grid-container900{
+  display: grid;
+  grid-template-rows: repeat(5,120px);
+  grid-template-columns: repeat(5,120px);
+  grid-gap: 20px;
+}
+.grid-container1200{
+  display: grid;
+  grid-template-rows: repeat(5,140px);
+  grid-template-columns: repeat(5,140px);
+  grid-gap: 20px;
+}
+
+
+
+#p1{
+   grid-row: 1/3;  
+  grid-column: 1/2;
+}
+#main-project-container{
+  font:white;
+  grid-row: 1/3;
+  grid-column: 2/5;
+  background: url("./mtbike.jpg") ;
+  background-size: cover;
+  opacity: 1;
+}
+#main-project-container:focus,
+#main-project-container:hover{
+  opacity:0.5;
+  cursor:pointer;
+  border: 10px solid black;
+}
+
+
+#Project-1{
+  position: relative;
+  opacity:1;
+  grid-row: 3/4;
+  grid-column: 1/3;
+  font-weight: 900;
+}
+#Project-1::before{
+  content:"";
+  background-image: url(./DailyToDo.jpg);
+  background-size: cover;
+  position:absolute;
+  opacity:0.4;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left:0px;
+}
+#Project-1:focus,
+#Project-1:hover{
+  opacity:0.5;
+  cursor:pointer;
+}
+#Project-2{
+  grid-row: 4/6;
+  grid-column: 1/3;
+}
+#Project-3{
+  grid-row: 5/6;
+  grid-column: 3/5;
+}
+
+#Project-4{
+  background: url(./clouds.jpg);
+  background-size: cover;
+  grid-row: 3/5;
+  grid-column: 3/5;
+}
+#Project-4:focus,
+#Project-4:hover{
+  opacity:0.5;
+  cursor:pointer;
+}
 

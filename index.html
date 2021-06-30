@@ -2,108 +2,53 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gman Portfolio</title>
-  <!-- <link rel="stylesheet" href="./assets/css/reset.css" /> -->
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <style></style>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- meyerweb reset CSS -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap" rel="stylesheet">
 </head>
 
 <body >   
-    <header>
-        <h1>Gman</h1>
-        <img src="Images\geoman.png" id="gman" alt="Friendly Gman" width=100px height=100px/>
-        <nav id="hyperlinks">
-            <ul class="inlinetable">
-                <li><a href="#bio" title="About Me">About Me</a></li> 
-                <li><a href="#p1" title="Work">Work</a></li>    
-                <li><a href="#Contact-Me" title="Contact Me">Contact Info</a></li>                </ul>
+    <header class="container row #e6ee9c lime lighten-3">
+      <!-- <nav class = "#9ccc65 light-green lighten-3" id="hyperlinks"> -->
+      <img class="left" src="./Images/gmanavatar" id="gman" alt="Friendly Gman" width=100px height=100px/>
+        <h1 style="color: black;">Gman</h1>
+            <ul style="color:black" class="inlinetable">
+                <li class="black"><a href="#bio" title="About Me">About Me</a></li> 
+                <li class="black"><a href="#p1" title="Work">Work</a></li>    
+                <li class="black"><a href="#Contact-Me" title="Contact Me">Contact Info</a></li>                </ul>
             </ul>
-        </nav>    
+        <!-- </nav>     -->
     </header>
+    <main class="container  #ffebee red lighten-5">
     <!-- Biographical section -->
-    <section id="bio">
-        <h1>About Me</h1>
-        <p id="bioc2"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-    </section>
-    <main >
-        <h1 id="p1">Work Projects</h1>
-        <!-- Main project section with survey, drawing, link to nowhere -->
-        <section id="main-project-container">
-            <h2> Wonderful World of red Worms (WWorW)</h2>
-            <!-- Hover section displayed to describe Project -->
-            <a id="workinprocess" title="Link to Work-in-Progress" href=#> Work in Progress</a>
-            <p class="hideinfo"> This is an education and entertainment site about Red Worms</p>
-            <!-- Hidden message displayed when browser width too small -->
-            <h2 class="skinny">EXPAND WIDTH OF BROWSER !!!</h2>
-            <section id="survey">
-                <form >
-                  <h3>What do think?</h3>
-                  <p>
-                    <label for="username">Name:</label>
-                    <input class="text-input" id="username" type="text" placeholder="First Last" />
-                  </p>
-                  <p>
-                    <label for="email">E-mail:</label>
-                    <input class="text-input" id="email" type="text" placeholder="me@example.com" />
-                  </p>
-                  <p > 
-                    <label for="expertise">What do think 
-                      about Worms?</label>
-                    <select id="expertise">
-                      <option>😀-Organic Farming Partner</option>
-                      <option selected>🙄-Not Sure</option>
-                      <option>😉-Lets go Fishin</option>
-                      <option>😣-Icky</option>
-                    </select>
-                  </p>
-                  <br>  
-                  <p>
-                    <span class="checkboxes" >
-                    <input type="checkbox" name="Agree" value="Agree"> I agree to share my info 
-                    </span>  
-                  </p>
-                  <p id="Wormbutton">
-                    <button type="button" onclick ="alert('Feature Under Construction')">Submit</button>
-                  </p>
-                </form>
-                <img src="Images\worms.png" id="worm" alt="Friendly Worm" width=100px height=100px/>
-            </section>
-          </section>
-        <!-- Smaller projects in Subprojects, link to nowhere for now -->
-        <section id="sub-project-container"  >
-            <section id="Project-1" class="subproject">
-                <h3>Project 1 - Scheduling App</h3>
-                <a id="workinprocess" title="Link to Work-in-Progress" href="https://gmcmurray.github.io/workinprogress/">Work in Progress</a>
-                <h3 class="hideinfo">Demo of creating work rosters</h2>
-            </section>
-            <section id="Project-2" class="subproject">
-                <h3>Project 2 -  Home/Apt Finder</h3>
-                <a id="workinprocess" title="Link to Work-in-Progress" href="https://gmcmurray.github.io/workinprogress/">Work in Progress</a>
-                <h3 class="hideinfo">Home/Apt tracker finder App</p>
-            </section>
-            <section id="Project-3" class="subproject">
-                <h3>Project 3 - Packing App</h3>
-                <a id="workinprocess" title="Link to Work-in-Progress" href="https://gmcmurray.github.io/workinprogress/">Work in Progress</a>
-                <p class="hideinfo">Optimal packing of 2D and 3D boxes</p>
-            </section>
-            <section id="Project-4" class="subproject">
-                <h3>Project 4 - IoT Sensors Dashboard</h3>
-                <a id="workinprocess" title="Link to Work-in-Progress" href="https://gmcmurray.github.io/workinprogress/">Work in Progress</a>
-                <p class="hideinfo">Real time iot application of sensors</p>
-            </section>
-        </section>
     </main>
   <footer id="Contact-Me">
     <h1 id="contacts"> Contact Info  </h1>
         <ul id="AboutMe" class="inlinetable">
-            <li><p>(555) 555-5555</p>Phone Number</li> 
-            <li><a href="mailto:webmaster@example.com">Gman</a><br>Email</li>    
-            <li><a href="gman.com">gman.com</ahref></a><br>Website</li>               
+            <li><p>(650) 880-7464</p>Phone Number</li> 
+            <li><a href="mailto:gmcmurray1493@gmail.com">Gman</a><br>Email</li>    
+            <li><a href="https://www.linkedin.com/in/george-mcmurray/">LinkedIn</ahref></a><br>LinkedIn</li>               
         </ul>
   </footer>
   <p id="thanks">Thanks for visiting!  </p>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- Moment.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <!-- My JavaScript -->
+  <script src="./assets/js/script.js"></script>
+  
 </body>
 
 </html>
