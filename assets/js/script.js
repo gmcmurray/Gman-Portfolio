@@ -1,13 +1,11 @@
 
-const winwidth = window.innerWidth
+var winwidth = window.innerWidth
 console.log(winwidth)
-const  divEl = document.getElementById("divproj")
-console.log(divEl)
 const mainEl = $("main")
 var divclass ="";
-    
-function styleset(winwidth){
-    // Style the grid for window size
+
+function setdivclass(winwidth){
+    winwidth== window.innerWidth;
     if(winwidth<600){ 
         divclass="grid-container600";
     }
@@ -17,41 +15,58 @@ function styleset(winwidth){
     else if (winwidth<900){ 
         divclass="grid-container900";
     }
-    else  if (winwidth<1200){
+    else  if (winwidth<1050){
         divclass="grid-container1200";}
-    else {divclass="grid-container1200"}
+    else {divclass="grid-containerplus"}
+
+    return(divclass)
+
+}
+
+function styleset(winwidth){
+    let divEl = document.getElementById("divproj");
+    // Style the grid for window size
+    let divclass = setdivclass(winwidth);
     mainEl.append(`
-    <section id="bio">
-        <h6 class="col s3" style="margin:auto">About Me:<button id="resum">Resume</button></h6>
-        <p class=" col s9" id="bioc2"></p>
-    </section>
    <div id="divproj" class="${divclass}">
     <h4 id="p1">Work Projects</h4>
-        <section class="subproject" id="main-project-container" >
-            <h4> Bike Trails </h4>
-            <article>
-              <p>Explore local bike trails in your city and find your next trail ride.  Check out the next 7 day weather forecast and set a date! </p>
-            </article>
+        <section  class="subproject" id="main-project-container" >
+            <h4 style="color:white; margin:5px" > Bike Trails ~ <spam style="font-size: 24px">Find bike trails to explore! </spam>  </h4>
           </section>
         <section id="Project-1" class="subproject">
-            <h5>Daily Scheduling</h5>
+            <h5 style="color:black; font-weight:900; margin:0px 0px 0px 5px">Daily Scheduling</h5>
             <article>
-            <p>Track your todo's for the Day and manage your working day by the hour!</p>
+            <p>Manage work day tasks hourly!</p>
             </article>
         </section>
         <section id="Project-2" class="subproject">
-                <h5>Quiz Game</h5>
-                <p>Test your knowledge on this timed quiz. See if you can improve your best score!</p>
+                <br><h5 style="color:red;font-weight:900">Quiz Game</h5>
+                <p style="color:black;font-weight:900">Test your knowledge on this timed quiz. See if you can improve your best score!</p>
         </section>
         <section id="Project-3" class="subproject">
-                <h5>Password Generator</h5>
-                <p>Generate random password with user inputs on characters</p>
+                <h6>Random Password Generator</h6>
         </section>
         <section id="Project-4" class="subproject">
-                <h5>Daily Weather</h5>
-                <p>Weather by City - Current and Forecast</p>
+                <h5 style="color:white">Daily Weather</h5>
+                <p style="color:white">Current Weather and Forecast by City</p>
         </section>
       </div>
+      <br>
+      <br>
+      <hr>
+      <hr>
+      <section id="bio" class="row left">
+      <h6 class="col s2" style=""margin:auto""> About Me</h6>
+      <p class="col s10" id="bioc2"></p>
+  </section>
+  <footer id="Contact-Me">
+    <h1 id="contacts"> Contact Info: </h1>
+        <ul id="AboutMe" class="">
+            <li><p>(650) 880-7464</p>Phone Number</li> 
+            <li><a href="mailto:gmcmurray1493@gmail.com">Email</a></li>    
+            <li><a href="https://www.linkedin.com/in/george-mcmurray/">LinkedIn</ahref></a></li>               
+        </ul>
+  </footer>
     `)
 }
 
@@ -60,10 +75,11 @@ styleset(winwidth)
 document.addEventListener('DOMContentLoaded', function() {
     // Load Biographical information
     $('#bioc2').append(`
-    <p class="list"> Formal Education Electrical Engineer and Applied Statistics. </p>
-    <p class="list"> Extensive Work Experience in Semiconductor Manufacturing /Logistic, IC Design 
+    <p class="list"> Formal Education : Duke ~ Electrical Engineer, UC Berkeley ~ Math Programming. </p>
+    <p class="list"> Extensive Work Experience in Semiconductor Manufacturing /Logistics, IC Design, 
     Quality Assurance and Program Management. </p>
-    <p class="list"> Coding Skills - HTML, CSS, JS, Node, Python, Minizinc </p>
+    <p class="list"> Coding Skills - HTML, CSS, JavaScript/JQuery, Node, Python, Minizinc </p>
+    <p class="list"> Full Stack Bootcamp Certification - University of Washington
     `)
     // Add listener function for projects
     $('#main-project-container').click(function(){
@@ -78,14 +94,11 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 
 
-// $(window).on('resize', function() {
-//     var win = $(this);
-//     if (win.width() > 600) {
-//         $('main').removeClass('col');
-//         $('main').addClass('row');
-    
-//     } else {
-//         $('main').removeClass('row');
-//         $('main').addClass('col');
-//     }
-//     });
+$(window).on('resize', function() {
+    let divEl = document.getElementById("divproj");
+    let winn = window.innerWidth;
+   console.log("change window",winn,setdivclass(winn),divEl)
+   divEl.classList.remove(...divEl.classList);
+   divEl.classList.add(setdivclass(winn))
+        
+    });

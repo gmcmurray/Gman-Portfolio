@@ -1,6 +1,6 @@
 
 :root{
-  --width: 1200px;
+  --width: 1300px;
   --biofontsize:20px;
   --expertise: 20vw;
 }
@@ -12,19 +12,7 @@
 body {
   border: 2px black;
   max-width: var(--width);
-  margin:20px;
-}
-h6{
-  text-decoration: underline;
-  font-weight: bolder;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-}
-
-.ccenter {
-  margin: auto;
-  width: 50%;
-  border: 3px solid green;
-  padding: 10px;
+  margin:10px;
 }
 
 .list {
@@ -34,11 +22,12 @@ h6{
 /* Header uses flexboxes and nav element to hyperlink to sections below 
 sub-elements, inline table is used to order the hyperlinks which are horizontal */
 header {
+  max-height: 150px;
   display:flex;
-  flex-flow: row wrap;
+  flex-flow: nowrap;
   justify-content: space-between;
-  padding: 20px; 
-  align-items: stretch;
+  padding: 5px; 
+  align-items: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background-color: #2a607c;
   color: #ffffff;
@@ -46,40 +35,32 @@ header {
 
 a {color: white}
 
-#workinprocess{
-  color:darkmagenta;
-}
 header h1 {
-  display: inline-block;
-  font-size: 48px;
+  font-size: 36px;
+}
+
+header img{
+  max-width:100%;
+  height: auto;
 }
 
 header nav {
     display:flex;
     justify-content: flex-end; 
-    height: 100%;
-    max-width: var(--width);
-    align-items: flex-end;
-    color:blanchedalmond;
+    max-height: 50%;
+    width: 30%;
+    align-items: stretch;
+    /* color:blanchedalmond; */
 }
 
 header nav ul {
   display: flex;
   justify-content:space-between;
   align-items: stretch;
-  margin: 5px 10px 0 100px;
+  margin: 5px 10px 5px 10px;
   list-style: none;
 }
 
-header nav ul li {
-  margin-right:10px;
-  margin-left:10px;
-  margin-top: 20px;
-  font-size: 15px;
-  color:white;
-}
-/* why are my projects not wrapping */
-/* why are my boxes not shrinking */
 main {
   display:flex;
   flex-wrap:wrap;
@@ -91,13 +72,7 @@ main {
 }
 /* Bio section as flexbox */
 #bio {
-   display: flex;
-   flex-direction: row;
-   flex-wrap:wrap;
-   justify-content: space-around;
-   align-items: stretch;
-   border:brown;
-   background-color: darkgrey;
+  font-family: 'Akaya Kanadaka';
  }
 
  /* Text of biography, font scales with width */
@@ -108,76 +83,6 @@ main {
  }
 
 #p1 { align-self: center;}
-/* All projects container - column flex */
-/* #main-project-container {
-      border: 2px solid rgb(34, 160, 51);
-      /* width: 70vw; */
-      /* height: 60vh;  */
-      /* display: flex; */
-      /* margin: 20 px; */
-      /* flex-direction: column;
-      align-self:center ; 
-      align-items: flex-start;
-      flex-shrink:1;
-      background-color: rgb(28, 153, 95);
-      padding: 10px;
-  } */ 
-  /* Provides row flex container inside a column container */
-.survey {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  border-style: solid;
-  border-width: 2px;
-}
-.checkbox{
-margin:5px;
-padding:0;
-height: 12px;
-}
-
-.column{
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-}
-
-/* Form styling */
-#survey {
-  display: flex;
-  flex-flow: row;
-}
-form{
-  flex:1 1 auto;
-  width: 50vw;
-}
-form button{
-  background-color: yellow;
-    padding: 10px;
-    display: block;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 30px; 
-}
-
-
-
-
-.checkboxes {
-  text-align:center;
-}
-
-.checkboxes input{
-  margin: 0 10px 0 5px;
-  padding: 0 0 0 0;
-}
-
-main #sub-project-container {
-    flex-direction:row;
-    flex-wrap:wrap;
-    display: flex;
-}
 
 /* Styles subprojects  */
 .subproject {
@@ -190,8 +95,9 @@ main #sub-project-container {
     border-radius: 15px;
   }
 
-  #p1, .subproject h4, .subproject h5{
+  #p1, .subproject h4, .subproject h5, * h6{
     font-family: 'Akaya Kanadaka';
+    
   }
 
   /* Styles info on projects, Hides  when not hovering over hyperlink */
@@ -215,37 +121,40 @@ border-style: solid;}
 
 
   footer {
+    max-height: 80px;
     display:flex;
     flex-flow: row nowrap;
-    padding: 20px; 
-    align-items: stretch;
+    padding: 1px; 
+    /* align-items: stretch; */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #527c2a;
+    background-color: #7dabe7;
     color: #ffffff;
     justify-content:space-between;
   }
 
   footer h1{
-    font-size: 24px;
+    font-size: 16px;
+    padding:5px;
+    margin:10px
   }
   
   footer ul {
   display: flex;
   justify-content:space-between;
-  align-items: stretch;
-  margin: 5px 10px 0 10px;
+  margin: 2px 5px 0 5px;
   list-style: none;
   align-items: flex-end;
   }
 
   footer ul li {
-    margin : 10px 40px 5px 5px;
+    margin : 5px 10px 5px 5px;
     font-size: 15px;
     color:white;
   }
   #thanks {
     margin: 5px 25% 0 25%;
     padding: 1px 10% 1px 10%;
+    font-weight: bold;
   }
   .skinny {
     visibility: hidden ;
@@ -273,14 +182,20 @@ border-style: solid;}
 }
 .grid-container900{
   display: grid;
-  grid-template-rows: repeat(5,120px);
-  grid-template-columns: repeat(5,120px);
+  grid-template-rows: repeat(5,150px);
+  grid-template-columns: repeat(5,150px);
   grid-gap: 20px;
 }
 .grid-container1200{
   display: grid;
-  grid-template-rows: repeat(5,140px);
-  grid-template-columns: repeat(5,140px);
+  grid-template-rows: repeat(5,180px);
+  grid-template-columns: repeat(5,180px);
+  grid-gap: 20px;
+}
+.grid-containerplus{
+  display: grid;
+  grid-template-rows: repeat(5,200px);
+  grid-template-columns: repeat(5,200px);
   grid-gap: 20px;
 }
 
@@ -325,13 +240,26 @@ border-style: solid;}
   left:0px;
 }
 #Project-1:focus,
-#Project-1:hover{
+#Project-1:hover
+{
   opacity:0.5;
   cursor:pointer;
 }
 #Project-2{
   grid-row: 4/6;
   grid-column: 1/3;
+  position: relative;
+}
+#Project-2::before{
+  content:"";
+  background-image: url(./shakespeare.jpg);
+  background-size: cover;
+  position:absolute;
+  opacity:0.4;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left:0px;
 }
 #Project-3{
   grid-row: 5/6;
