@@ -25,15 +25,17 @@ header {
   max-height: 150px;
   display:flex;
   flex-flow: nowrap;
-  justify-content: space-between;
+  justify-content:space-evenly;
   padding: 5px; 
   align-items: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: #2a607c;
+  background-color: #0fe962;
   color: #ffffff;
 }
 
-a {color: white}
+header div a {
+  color: black;
+  margin: 2px;}
 
 header h1 {
   font-size: 36px;
@@ -44,20 +46,12 @@ header img{
   height: auto;
 }
 
-header nav {
-    display:flex;
-    justify-content: flex-end; 
-    max-height: 50%;
-    width: 30%;
-    align-items: stretch;
-    /* color:blanchedalmond; */
-}
-
-header nav ul {
+header div{
   display: flex;
+  width: 50px;
   justify-content:space-between;
   align-items: stretch;
-  margin: 5px 10px 5px 10px;
+  margin: 5px 5px 5px 5px;
   list-style: none;
 }
 
@@ -149,6 +143,9 @@ border-style: solid;}
   footer ul li {
     margin : 5px 10px 5px 5px;
     font-size: 15px;
+    color:white;
+  }
+  footer a{
     color:white;
   }
   #thanks {

@@ -56,7 +56,7 @@ function styleset(winwidth){
       <hr>
       <hr>
       <section id="bio" class="row left">
-      <h6 class="col s2" style=""margin:auto""> About Me</h6>
+      <h6 class="col s2" style=""margin:auto""> About Me <a href="./resume.pdf">Resume</a> </h6>
       <p class="col s10" id="bioc2"></p>
   </section>
   <footer id="Contact-Me">
@@ -64,7 +64,7 @@ function styleset(winwidth){
         <ul id="AboutMe" class="">
             <li><p>(650) 880-7464</p>Phone Number</li> 
             <li><a href="mailto:gmcmurray1493@gmail.com">Email</a></li>    
-            <li><a href="https://www.linkedin.com/in/george-mcmurray/">LinkedIn</ahref></a></li>               
+            <li><a href="https://www.linkedin.com/in/george-mcmurray/">LinkedIn</a></li>               
         </ul>
   </footer>
     `)
@@ -100,5 +100,7 @@ $(window).on('resize', function() {
    console.log("change window",winn,setdivclass(winn),divEl)
    divEl.classList.remove(...divEl.classList);
    divEl.classList.add(setdivclass(winn))
-        
+   if(winn<550){
+
+   }
     });
