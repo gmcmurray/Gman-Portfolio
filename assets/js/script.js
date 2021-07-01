@@ -2,28 +2,29 @@
 var winwidth = window.innerWidth
 console.log(winwidth)
 const mainEl = $("main")
-var divclass ="";
+var divclass = "";
 
-function setdivclass(winwidth){
-    winwidth== window.innerWidth;
-    if(winwidth<600){ 
-        divclass="grid-container600";
+function setdivclass(winwidth) {
+    winwidth == window.innerWidth;
+    if (winwidth < 600) {
+        divclass = "grid-container600";
     }
-    else if (winwidth<750){
-        divclass="grid-container750";
+    else if (winwidth < 750) {
+        divclass = "grid-container750";
     }
-    else if (winwidth<900){ 
-        divclass="grid-container900";
+    else if (winwidth < 900) {
+        divclass = "grid-container900";
     }
-    else  if (winwidth<1050){
-        divclass="grid-container1200";}
-    else {divclass="grid-containerplus"}
+    else if (winwidth < 1050) {
+        divclass = "grid-container1200";
+    }
+    else { divclass = "grid-containerplus" }
 
-    return(divclass)
+    return (divclass)
 
 }
 
-function styleset(winwidth){
+function styleset(winwidth) {
     let divEl = document.getElementById("divproj");
     // Style the grid for window size
     let divclass = setdivclass(winwidth);
@@ -56,7 +57,7 @@ function styleset(winwidth){
       <hr>
       <hr>
       <section id="bio" class="row left">
-      <h6 class="col s2" style=""margin:auto""> About Me <a href="./resume.pdf">Resume</a> </h6>
+      <h6 class="col s2" style=""margin:auto""> About Me <a href="./resume.pdf" target="_blank">Resume</a> </h6>
       <p class="col s10" id="bioc2"></p>
   </section>
   <footer id="Contact-Me">
@@ -72,7 +73,7 @@ function styleset(winwidth){
 
 styleset(winwidth)
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Load Biographical information
     $('#bioc2').append(`
     <p class="list"> Formal Education : Duke ~ Electrical Engineer, UC Berkeley ~ Math Programming. </p>
@@ -82,25 +83,25 @@ document.addEventListener('DOMContentLoaded', function() {
     <p class="list"> Full Stack Bootcamp Certification - University of Washington
     `)
     // Add listener function for projects
-    $('#main-project-container').click(function(){
-    window.open("https://dn-vanguard.github.io/BikeTrails/","_blank")
+    $('#main-project-container').click(function () {
+        window.open("https://dn-vanguard.github.io/BikeTrails/", "_blank")
     });
-    $('#Project-1').click(function(){
-        window.open("https://gmcmurray.github.io/DayScheduler/","_blank")
-        });
-    $('#Project-4').click(function(){
-        window.open("https://gmcmurray.github.io/WeatherReport/","_blank")
-        });
+    $('#Project-1').click(function () {
+        window.open("https://gmcmurray.github.io/DayScheduler/", "_blank")
+    });
+    $('#Project-4').click(function () {
+        window.open("https://gmcmurray.github.io/WeatherReport/", "_blank")
+    });
 })
 
 
-$(window).on('resize', function() {
+$(window).on('resize', function () {
     let divEl = document.getElementById("divproj");
     let winn = window.innerWidth;
-   console.log("change window",winn,setdivclass(winn),divEl)
-   divEl.classList.remove(...divEl.classList);
-   divEl.classList.add(setdivclass(winn))
-   if(winn<550){
+    console.log("change window", winn, setdivclass(winn), divEl)
+    divEl.classList.remove(...divEl.classList);
+    divEl.classList.add(setdivclass(winn))
+    if (winn < 550) {
 
-   }
-    });
+    }
+});
