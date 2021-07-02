@@ -61,6 +61,13 @@ function styleset(winwidth) {
         </ul>
   </footer>
     `)
+    $('#bioc2').append(`
+    <p class="list"> Formal Education : Duke ~ Electrical Engineer, UC Berkeley ~ Math Programming. </p>
+    <p class="list"> Extensive Work Experience in Semiconductor Manufacturing /Logistics, IC Design, 
+    Quality Assurance and Program Management. </p>
+    <p class="list"> Coding Skills - HTML, CSS, JavaScript/JQuery, Node, Python, Minizinc </p>
+    <p class="list"> Full Stack Bootcamp Certification - University of Washington
+    `)
 }
 
 styleset(winwidth)
