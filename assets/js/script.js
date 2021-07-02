@@ -4,24 +4,16 @@ console.log(winwidth)
 const mainEl = $("main")
 var divclass = "";
 
+
 function setdivclass(winwidth) {
-    winwidth == window.innerWidth;
-    if (winwidth < 600) {
-        divclass = "grid-container600";
-    }
-    else if (winwidth < 750) {
-        divclass = "grid-container750";
-    }
-    else if (winwidth < 900) {
-        divclass = "grid-container900";
-    }
-    else if (winwidth < 1050) {
-        divclass = "grid-container1200";
-    }
-    else { divclass = "grid-containerplus" }
-
-    return (divclass)
-
+    let root = document.documentElement;
+    let winn = window.innerWidth
+    root.style.setProperty('--colrowsize',parseInt(winn/5))
+    root.style.setProperty('--row1',parseInt(24+34*(winn-500)/700))
+    root.style.setProperty('--row2',parseInt(32+46*(winn-500)/700))
+    root.style.setProperty('--row3',parseInt(40+58*(winn-500)/700))
+    root.style.setProperty('--row4',parseInt(48+70*(winn-500)/700))
+    console.log(root)
 }
 
 function styleset(winwidth) {
@@ -29,8 +21,8 @@ function styleset(winwidth) {
     // Style the grid for window size
     let divclass = setdivclass(winwidth);
     mainEl.append(`
-   <div id="divproj" class="${divclass}">
-    <h4 id="p1">Work Projects</h4>
+   <div id="divproj" class="grid-container">
+    <h4 id="p1">API Projects</h4>
         <section  class="subproject" id="main-project-container" >
             <h4 style="color:white; margin:5px" > Bike Trails ~ <spam style="font-size: 24px">Find bike trails to explore! </spam>  </h4>
           </section>
@@ -56,10 +48,10 @@ function styleset(winwidth) {
       <br>
       <hr>
       <hr>
-      <section id="bio" class="row left">
-      <h6 class="col s2" style=""margin:auto""> About Me <a href="./resume.pdf" target="_blank">Resume</a> </h6>
-      <p class="col s10" id="bioc2"></p>
-  </section>
+    <section id="bio" class="bioinfo">
+      <h5 id="bioinfotit" style=""margin:5px"> About Me <a href="./resume.pdf" target="_blank">Resume</a> </h5>
+      <p  id="bioc2"></p>
+    </section>
   <footer id="Contact-Me">
     <h1 id="contacts"> Contact Info: </h1>
         <ul id="AboutMe" class="">
@@ -96,12 +88,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 $(window).on('resize', function () {
-    let divEl = document.getElementById("divproj");
-    let winn = window.innerWidth;
-    console.log("change window", winn, setdivclass(winn), divEl)
-    divEl.classList.remove(...divEl.classList);
-    divEl.classList.add(setdivclass(winn))
-    if (winn < 550) {
-
-    }
+    let root = document.documentElement;
+    let winn = window.innerWidth
+    root.style.setProperty('--colrowsize',parseInt(winn/5))
+    console.log(parseInt(winn/5))
+    styleset(winn)
 });
+
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+
+  console.log()
