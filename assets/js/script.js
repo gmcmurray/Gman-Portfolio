@@ -17,7 +17,7 @@ function setdivclass(winwidth) {
 }
 
 function styleset(winwidth) {
-    let divEl = document.getElementById("divproj");
+    mainEl.empty();
     // Style the grid for window size
     let divclass = setdivclass(winwidth);
     mainEl.append(`
