@@ -4,7 +4,7 @@ console.log(winwidth)
 const mainEl = $("main")
 var divclass = "";
 
-
+// sets up grid to scale with window  width constant aspect ratio 
 function setdivclass(winwidth) {
     let root = document.documentElement;
     let winn = window.innerWidth
@@ -24,7 +24,7 @@ function styleset(winwidth) {
    <div id="divproj" class="grid-container">
     <h4 id="p1">API Projects</h4>
         <section  class="subproject" id="main-project-container" >
-            <h4 style="color:white; margin:5px" > Bike Trails ~ <spam style="font-size: 24px">Find bike trails to explore! </spam>  </h4>
+            <h4 style="color:blue; margin:5px" > Meal Planning ~ <spam style="font-size: 24px">Plan your weekly Meals! </spam>  </h4>
           </section>
         <section id="Project-1" class="subproject">
             <h5 style="color:black; font-weight:900; margin:0px 0px 0px 5px">Daily Scheduling</h5>
@@ -33,15 +33,19 @@ function styleset(winwidth) {
             </article>
         </section>
         <section id="Project-2" class="subproject">
-                <br><h5 style="color:red;font-weight:900">Quiz Game</h5>
-                <p style="color:black;font-weight:900">Test your knowledge on this timed quiz. See if you can improve your best score!</p>
+                <br><h5 style="color:red;font-weight:900">Bike Trails</h5>
+                <p style="color:black;font-weight:900">Find a trail near you and Explore!</p>
         </section>
         <section id="Project-3" class="subproject">
-                <h6>Random Password Generator</h6>
+                <h6>Daily Weather</h6>
+                <p style="color:white">Current Weather and Forecast by City</p>
         </section>
         <section id="Project-4" class="subproject">
-                <h5 style="color:white">Daily Weather</h5>
-                <p style="color:white">Current Weather and Forecast by City</p>
+              
+                <h4 style="color:black">Tech Blog</h4>
+                <div id="techblog">
+                <p style="color:black; max-width: 10em">Blog about Programming Languages!</p>
+              </div>
         </section>
       </div>
       <br>
@@ -83,13 +87,20 @@ document.addEventListener('DOMContentLoaded', function () {
     `)
     // Add listener function for projects
     $('#main-project-container').click(function () {
-        window.open("https://dn-vanguard.github.io/BikeTrails/", "_blank")
+        window.open("https://meal-planner-5.herokuapp.com/", "_blank")
     });
     $('#Project-1').click(function () {
         window.open("https://gmcmurray.github.io/DayScheduler/", "_blank")
     });
+    $('#Project-2').click(function () {
+      window.open("https://dn-vanguard.github.io/BikeTrails/", "_blank")
+    });
+    $('#Project-3').click(function () {
+      window.open("https://gmcmurray.github.io/WeatherReport/", "_blank")
+    });
+
     $('#Project-4').click(function () {
-        window.open("https://gmcmurray.github.io/WeatherReport/", "_blank")
+        window.open("https://techblog-gmcmurray.herokuapp.com/", "_blank")
     });
 })
 
